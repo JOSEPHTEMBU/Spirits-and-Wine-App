@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">spirits and wine app</string>
+    <string name="get_your_favourite_spirits_and_wine">Get your favourite Spirits and Wine</string>
+    <string name="wines_and_spirits">Wines And Spirits</string>
+    <string name="login">Login</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>\
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logged_in_as_user">Logged In As User</string>
 </resources>
