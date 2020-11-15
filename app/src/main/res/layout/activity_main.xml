@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#000000">
+    android:background="#FFFFFF">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spirits and Wine App"
+        android:text=" Get your Spirits and Wine "
         android:layout_marginTop="35dp"
         android:id="@+id/appNameTextView"
 
@@ -30,7 +30,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Find Spirits And wine"
+        android:text="Find varieties of  Spirits And wine"
         android:id="@+id/findSpiritsandwineButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
