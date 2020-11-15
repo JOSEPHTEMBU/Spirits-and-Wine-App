@@ -16,12 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        mFindSpiritsAndWineButton = (Button) findViewById(R.id.findSpiritsAndWineButton);
-//        mFindSpiritsAndWineButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "Welcome to Spirits and wine app!", Toast.LENGTH_LONG).show();
-//            }
-//        });
+
+
     }
 }
