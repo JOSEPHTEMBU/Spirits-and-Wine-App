@@ -13,6 +13,7 @@
         android:textSize="15sp"
         android:textStyle="bold" />
 
+
     <TextView
         android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
@@ -23,6 +24,7 @@
         android:text="@string/wines_and_spirits"
         android:textSize="30sp"
         android:textStyle="bold" />
+
 
     <ListView
         android:layout_width="wrap_content"
