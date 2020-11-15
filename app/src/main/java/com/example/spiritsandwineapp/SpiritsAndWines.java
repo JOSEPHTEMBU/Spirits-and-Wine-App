@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 
 public class SpiritsAndWines extends AppCompatActivity {
 
-    String[] drinks = {"Amarula","White Walker", "Coke","Stoney","fanta Orange"};
+    String[] drinks = { " rum","tequila","baijiu","Amarula","White Walker", "Vodka","shōchū","shōchū"};
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.loggedInAs)
     TextView mLoggedInAsTextView;
