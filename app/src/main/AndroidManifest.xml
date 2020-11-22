@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SpiritsAndWineApp">
+        <activity android:name=".ui.SpiritAndWinesDetail"></activity>
+        <activity android:name=".ui.SpiritAndWinesList" />
         <activity android:name=".SpiritandWineDetailActivity" />
         <activity android:name=".ui.SpiritAndWineListActivity" />
-        <activity android:name=".ui.SpiritsAndWines" />
-        <activity android:name=".ui.Signup" />
         <activity android:name=".ui.MainActivity" />
     </application>
 

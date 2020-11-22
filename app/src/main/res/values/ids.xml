@@ -5,4 +5,8 @@
     <item name="spiritsandwineImageView" type="id" />
     <item name="spiritsandwineNameTextView" type="id" />
     <item name="categoryTextView" type="id" />
+    <item name="locationEditText" type="id" />
+    <item name="errorTextView" type="id" />
+    <item name="locationTextView" type="id" />
+    <item name="progressBar" type="id" />
 </resources>
