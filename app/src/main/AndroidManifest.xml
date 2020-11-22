@@ -13,13 +13,6 @@
         <activity android:name=".ui.SpiritAndWineListActivity" />
         <activity android:name=".ui.SpiritsAndWines" />
         <activity android:name=".ui.Signup" />
-        <activity android:name=".ui.Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".ui.MainActivity" />
     </application>
 

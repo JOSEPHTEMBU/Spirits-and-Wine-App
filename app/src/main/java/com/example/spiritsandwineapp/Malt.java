@@ -1,42 +1,34 @@
 
-package com.example.spiritsandwineapp.models;
+package com.example.spiritsandwineapp;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class AutocompleteBrewery {
+public class Malt {
 
-    @SerializedName("id")
-    @Expose
-    private String id;
     @SerializedName("name")
     @Expose
     private String name;
+    @SerializedName("amount")
+    @Expose
+    private Amount amount;
 
     /**
      * No args constructor for use in serialization
      * 
      */
-    public AutocompleteBrewery() {
+    public Malt() {
     }
 
     /**
      * 
+     * @param amount
      * @param name
-     * @param id
      */
-    public AutocompleteBrewery(String id, String name) {
+    public Malt(String name, Amount amount) {
         super();
-        this.id = id;
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+        this.amount = amount;
     }
 
     public String getName() {
@@ -45,6 +37,14 @@ public class AutocompleteBrewery {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Amount getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Amount amount) {
+        this.amount = amount;
     }
 
 }
