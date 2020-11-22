@@ -1,10 +1,10 @@
 
-package com.example.spiritsandwineapp;
+package com.example.spiritsandwineapp.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class SearchBrewery {
+public class GetBreweries {
 
     @SerializedName("id")
     @Expose
@@ -62,7 +62,7 @@ public class SearchBrewery {
      * No args constructor for use in serialization
      * 
      */
-    public SearchBrewery() {
+    public GetBreweries() {
     }
 
     /**
@@ -85,7 +85,7 @@ public class SearchBrewery {
      * @param longitude
      * @param updatedAt
      */
-    public SearchBrewery(Long id, String name, String breweryType, String street, Object address2, Object address3, String city, String state, Object countyProvince, String postalCode, String country, String longitude, String latitude, String phone, String websiteUrl, String updatedAt, String createdAt) {
+    public GetBreweries(Long id, String name, String breweryType, String street, Object address2, Object address3, String city, String state, Object countyProvince, String postalCode, String country, String longitude, String latitude, String phone, String websiteUrl, String updatedAt, String createdAt) {
         super();
         this.id = id;
         this.name = name;

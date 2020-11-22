@@ -1,8 +1,10 @@
-package com.example.spiritsandwineapp;
+package com.example.spiritsandwineapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.spiritsandwineapp.R;
 
 public class Signup extends AppCompatActivity {
 

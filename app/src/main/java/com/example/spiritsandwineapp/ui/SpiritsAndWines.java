@@ -1,4 +1,4 @@
-package com.example.spiritsandwineapp;
+package com.example.spiritsandwineapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.spiritsandwineapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
