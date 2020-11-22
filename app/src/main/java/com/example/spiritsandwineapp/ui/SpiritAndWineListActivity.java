@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.spiritsandwineapp.R;
 
-public class WineListActivity extends AppCompatActivity {
+public class SpiritAndWineListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
