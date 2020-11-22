@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SpiritsAndWineApp">
-        <activity android:name=".ui.SpiritAndWineListActivity"></activity>
+        <activity android:name=".SpiritsandWineDetailFragment"></activity>
+        <activity android:name=".SpiritandWineDetailActivity" />
+        <activity android:name=".ui.SpiritAndWineListActivity" />
         <activity android:name=".ui.SpiritsAndWines" />
         <activity android:name=".ui.Signup" />
         <activity android:name=".ui.Login">
@@ -19,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity"></activity>
+        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>
