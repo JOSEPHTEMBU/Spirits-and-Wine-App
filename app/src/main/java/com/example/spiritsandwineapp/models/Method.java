@@ -1,5 +1,5 @@
 
-package com.example.spiritsandwineapp;
+package com.example.spiritsandwineapp.models;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
@@ -15,7 +15,7 @@ public class Method {
     private Fermentation fermentation;
     @SerializedName("twist")
     @Expose
-    private String twist;
+    private Object twist;
 
     /**
      * No args constructor for use in serialization
@@ -30,7 +30,7 @@ public class Method {
      * @param fermentation
      * @param twist
      */
-    public Method(List<MashTemp> mashTemp, Fermentation fermentation, String twist) {
+    public Method(List<MashTemp> mashTemp, Fermentation fermentation, Object twist) {
         super();
         this.mashTemp = mashTemp;
         this.fermentation = fermentation;
@@ -53,11 +53,11 @@ public class Method {
         this.fermentation = fermentation;
     }
 
-    public String getTwist() {
+    public Object getTwist() {
         return twist;
     }
 
-    public void setTwist(String twist) {
+    public void setTwist(Object twist) {
         this.twist = twist;
     }
 

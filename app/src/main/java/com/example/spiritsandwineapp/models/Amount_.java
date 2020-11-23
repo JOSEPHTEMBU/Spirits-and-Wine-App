@@ -1,10 +1,10 @@
 
-package com.example.spiritsandwineapp;
+package com.example.spiritsandwineapp.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Amount {
+public class Amount_ {
 
     @SerializedName("value")
     @Expose
@@ -17,7 +17,7 @@ public class Amount {
      * No args constructor for use in serialization
      * 
      */
-    public Amount() {
+    public Amount_() {
     }
 
     /**
@@ -25,7 +25,7 @@ public class Amount {
      * @param unit
      * @param value
      */
-    public Amount(Double value, String unit) {
+    public Amount_(Double value, String unit) {
         super();
         this.value = value;
         this.unit = unit;

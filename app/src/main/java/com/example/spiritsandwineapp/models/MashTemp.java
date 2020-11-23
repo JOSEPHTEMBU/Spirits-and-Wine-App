@@ -1,5 +1,6 @@
 
-package com.example.spiritsandwineapp;
+package com.example.spiritsandwineapp.models;
+
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -11,7 +12,7 @@ public class MashTemp {
     private Temp temp;
     @SerializedName("duration")
     @Expose
-    private Long duration;
+    private Object duration;
 
     /**
      * No args constructor for use in serialization
@@ -25,7 +26,7 @@ public class MashTemp {
      * @param duration
      * @param temp
      */
-    public MashTemp(Temp temp, Long duration) {
+    public MashTemp(Temp temp, Object duration) {
         super();
         this.temp = temp;
         this.duration = duration;
@@ -39,11 +40,11 @@ public class MashTemp {
         this.temp = temp;
     }
 
-    public Long getDuration() {
+    public Object getDuration() {
         return duration;
     }
 
-    public void setDuration(Long duration) {
+    public void setDuration(Object duration) {
         this.duration = duration;
     }
 

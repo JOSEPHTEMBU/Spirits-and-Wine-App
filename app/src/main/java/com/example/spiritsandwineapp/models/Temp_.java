@@ -1,10 +1,10 @@
 
-package com.example.spiritsandwineapp;
+package com.example.spiritsandwineapp.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Temp {
+public class Temp_ {
 
     @SerializedName("value")
     @Expose
@@ -17,7 +17,7 @@ public class Temp {
      * No args constructor for use in serialization
      * 
      */
-    public Temp() {
+    public Temp_() {
     }
 
     /**
@@ -25,7 +25,7 @@ public class Temp {
      * @param unit
      * @param value
      */
-    public Temp(Long value, String unit) {
+    public Temp_(Long value, String unit) {
         super();
         this.value = value;
         this.unit = unit;

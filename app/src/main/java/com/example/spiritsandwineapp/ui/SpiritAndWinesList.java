@@ -7,8 +7,8 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.spiritsandwineapp.MainDatum;
 import com.example.spiritsandwineapp.R;
+import com.example.spiritsandwineapp.models.Brew;
 import com.example.spiritsandwineapp.network.PunkApi;
 import com.example.spiritsandwineapp.network.PunkClient;
 
@@ -34,15 +34,15 @@ public class SpiritAndWinesList extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, drinks);
         mDrinksListView.setAdapter(adapter);
         PunkApi client = PunkClient.getClient();
-        Call<ArrayList<MainDatum>> call = client.getBeers();
-        call.enqueue(new Callback<ArrayList<MainDatum>>() {
+        Call<ArrayList<Brew>> call = client.getBeers();
+        call.enqueue(new Callback<ArrayList<Brew>>() {
             @Override
-            public void onResponse(Call<ArrayList<MainDatum>> call, Response<ArrayList<MainDatum>> response) {
+            public void onResponse(Call<ArrayList<Brew>> call, Response<ArrayList<Brew>> response) {
                 Log.d(TAG, "onResponse: successful");
             }
 
             @Override
-            public void onFailure(Call<ArrayList<MainDatum>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<Brew>> call, Throwable t) {
             }
         });
     }

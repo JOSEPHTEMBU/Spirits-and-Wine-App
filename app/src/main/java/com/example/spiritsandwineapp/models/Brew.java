@@ -1,11 +1,10 @@
 
-package com.example.spiritsandwineapp;
-
+package com.example.spiritsandwineapp.models;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class MainDatum {
+public class Brew {
 
     @SerializedName("id")
     @Expose
@@ -75,7 +74,7 @@ public class MainDatum {
      * No args constructor for use in serialization
      * 
      */
-    public MainDatum() {
+    public Brew() {
     }
 
     /**
@@ -102,7 +101,7 @@ public class MainDatum {
      * @param ibu
      * @param boilVolume
      */
-    public MainDatum(Long id, String name, String tagline, String firstBrewed, String description, String imageUrl, Double abv, Long ibu, Long targetFg, Long targetOg, Long ebc, Long srm, Double ph, Long attenuationLevel, Volume volume, BoilVolume boilVolume, Method method, Ingredients ingredients, List<String> foodPairing, String brewersTips, String contributedBy) {
+    public Brew(Long id, String name, String tagline, String firstBrewed, String description, String imageUrl, Double abv, Long ibu, Long targetFg, Long targetOg, Long ebc, Long srm, Double ph, Long attenuationLevel, Volume volume, BoilVolume boilVolume, Method method, Ingredients ingredients, List<String> foodPairing, String brewersTips, String contributedBy) {
         super();
         this.id = id;
         this.name = name;
