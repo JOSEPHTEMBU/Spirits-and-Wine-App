@@ -16,17 +16,23 @@
         android:layout_marginTop="16dp"
         android:visibility="gone" />
 
-
-
-
-
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/drinkListView"
+        android:layout_below="@+id/appNameTextView"
+        android:layout_alignParentEnd="true" />
+
+
+
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar"-->
+<!--        style="?android:attr/progressBarStyle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true" />-->
 
     <TextView
         android:id="@+id/locationTextView"

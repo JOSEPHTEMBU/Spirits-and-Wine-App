@@ -5,7 +5,7 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class GetBrewery {
+public class MainDatum {
 
     @SerializedName("id")
     @Expose
@@ -48,7 +48,7 @@ public class GetBrewery {
     private Double ph;
     @SerializedName("attenuation_level")
     @Expose
-    private Double attenuationLevel;
+    private Long attenuationLevel;
     @SerializedName("volume")
     @Expose
     private Volume volume;
@@ -75,7 +75,7 @@ public class GetBrewery {
      * No args constructor for use in serialization
      * 
      */
-    public GetBrewery() {
+    public MainDatum() {
     }
 
     /**
@@ -102,7 +102,7 @@ public class GetBrewery {
      * @param ibu
      * @param boilVolume
      */
-    public GetBrewery(Long id, String name, String tagline, String firstBrewed, String description, String imageUrl, Double abv, Long ibu, Long targetFg, Long targetOg, Long ebc, Long srm, Double ph, Double attenuationLevel, Volume volume, BoilVolume boilVolume, Method method, Ingredients ingredients, List<String> foodPairing, String brewersTips, String contributedBy) {
+    public MainDatum(Long id, String name, String tagline, String firstBrewed, String description, String imageUrl, Double abv, Long ibu, Long targetFg, Long targetOg, Long ebc, Long srm, Double ph, Long attenuationLevel, Volume volume, BoilVolume boilVolume, Method method, Ingredients ingredients, List<String> foodPairing, String brewersTips, String contributedBy) {
         super();
         this.id = id;
         this.name = name;
@@ -231,11 +231,11 @@ public class GetBrewery {
         this.ph = ph;
     }
 
-    public Double getAttenuationLevel() {
+    public Long getAttenuationLevel() {
         return attenuationLevel;
     }
 
-    public void setAttenuationLevel(Double attenuationLevel) {
+    public void setAttenuationLevel(Long attenuationLevel) {
         this.attenuationLevel = attenuationLevel;
     }
 

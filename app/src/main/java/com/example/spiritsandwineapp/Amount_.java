@@ -8,7 +8,7 @@ public class Amount_ {
 
     @SerializedName("value")
     @Expose
-    private Double value;
+    private Long value;
     @SerializedName("unit")
     @Expose
     private String unit;
@@ -25,17 +25,17 @@ public class Amount_ {
      * @param unit
      * @param value
      */
-    public Amount_(Double value, String unit) {
+    public Amount_(Long value, String unit) {
         super();
         this.value = value;
         this.unit = unit;
     }
 
-    public Double getValue() {
+    public Long getValue() {
         return value;
     }
 
-    public void setValue(Double value) {
+    public void setValue(Long value) {
         this.value = value;
     }
 

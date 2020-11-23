@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @BindView(R.id.findSpiritsandwineButton)
     Button mFindSpiritandwineButton;
-    @BindView(R.id.locationEditText)
-    EditText mLocationEditText;
+   // @BindView(R.id.locationEditText)
+    //EditText mLocationEditText;
     @BindView(R.id.appNameTextView)
     TextView mAppNameTextView;
 
@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == mFindSpiritandwineButton) {
-            String location = mLocationEditText.getText().toString();
+           // String location = mLocationEditText.getText().toString();
             Intent intent = new Intent(MainActivity.this, SpiritAndWinesList.class);
-            intent.putExtra("location", location);
+           // intent.putExtra("location", location);
             startActivity(intent);
         }
 
