@@ -1,5 +1,6 @@
 package com.example.spiritsandwineapp.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -52,18 +53,23 @@ public class SpiritAndWineListAdapter extends RecyclerView.Adapter<SpiritAndWine
 
 
     public class SpiritAndWineViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.spiritsAndWineImageView)
         ImageView mSpiritsAndWineImageView;
-        @BindView(R.id.spiritsandwineNameTextView)
+        @SuppressLint("NonConstantResourceId")
+        @BindView(R.id.spiritsAndWineName)
         TextView mNameTextView;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.firstBrewed) TextView mDateBrewed;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.phTextView) TextView mPhTextView;
-        private Context mContext;
+        private final Context mContext;
 
 
 
         public SpiritAndWineViewHolder(@NonNull View itemView) {
             super(itemView);
+            ButterKnife.bind(this,itemView);
             mContext = itemView.getContext();
             itemView.setOnClickListener(this);
         }

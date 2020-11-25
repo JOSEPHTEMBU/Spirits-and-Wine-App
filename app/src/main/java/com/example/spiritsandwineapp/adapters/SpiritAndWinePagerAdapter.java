@@ -12,6 +12,7 @@ import java.util.List;
 
 public class SpiritAndWinePagerAdapter extends FragmentPagerAdapter {
     private List<Brew> mBrews;
+
     public SpiritAndWinePagerAdapter(FragmentManager fm, int behavior, List<Brew> brews) {
         super(fm, behavior);
         mBrews = brews;
@@ -24,6 +25,7 @@ public class SpiritAndWinePagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return mBrews.size();
     }
+
     @Override
     public CharSequence getPageTitle(int position) {
         return mBrews.get(position).getName();

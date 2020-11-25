@@ -4,11 +4,13 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
 public class Brew {
 
     @SerializedName("id")
     @Expose
-    private Long id;
+    private Double id;
     @SerializedName("name")
     @Expose
     private String name;
@@ -29,25 +31,25 @@ public class Brew {
     private Double abv;
     @SerializedName("ibu")
     @Expose
-    private Long ibu;
+    private Double ibu;
     @SerializedName("target_fg")
     @Expose
-    private Long targetFg;
+    private Double targetFg;
     @SerializedName("target_og")
     @Expose
-    private Long targetOg;
+    private Double targetOg;
     @SerializedName("ebc")
     @Expose
-    private Long ebc;
+    private Double ebc;
     @SerializedName("srm")
     @Expose
-    private Long srm;
+    private Double srm;
     @SerializedName("ph")
     @Expose
     private Double ph;
     @SerializedName("attenuation_level")
     @Expose
-    private Long attenuationLevel;
+    private Double attenuationLevel;
     @SerializedName("volume")
     @Expose
     private Volume volume;
@@ -101,7 +103,7 @@ public class Brew {
      * @param ibu
      * @param boilVolume
      */
-    public Brew(Long id, String name, String tagline, String firstBrewed, String description, String imageUrl, Double abv, Long ibu, Long targetFg, Long targetOg, Long ebc, Long srm, Double ph, Long attenuationLevel, Volume volume, BoilVolume boilVolume, Method method, Ingredients ingredients, List<String> foodPairing, String brewersTips, String contributedBy) {
+    public Brew(Double id, String name, String tagline, String firstBrewed, String description, String imageUrl, Double abv, Double ibu, Double targetFg, Double targetOg, Double ebc, Double srm, Double ph, Double attenuationLevel, Volume volume, BoilVolume boilVolume, Method method, Ingredients ingredients, List<String> foodPairing, String brewersTips, String contributedBy) {
         super();
         this.id = id;
         this.name = name;
@@ -126,11 +128,11 @@ public class Brew {
         this.contributedBy = contributedBy;
     }
 
-    public Long getId() {
+    public Double getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Double id) {
         this.id = id;
     }
 
@@ -182,43 +184,43 @@ public class Brew {
         this.abv = abv;
     }
 
-    public Long getIbu() {
+    public Double getIbu() {
         return ibu;
     }
 
-    public void setIbu(Long ibu) {
+    public void setIbu(Double ibu) {
         this.ibu = ibu;
     }
 
-    public Long getTargetFg() {
+    public Double getTargetFg() {
         return targetFg;
     }
 
-    public void setTargetFg(Long targetFg) {
+    public void setTargetFg(Double targetFg) {
         this.targetFg = targetFg;
     }
 
-    public Long getTargetOg() {
+    public Double getTargetOg() {
         return targetOg;
     }
 
-    public void setTargetOg(Long targetOg) {
+    public void setTargetOg(Double targetOg) {
         this.targetOg = targetOg;
     }
 
-    public Long getEbc() {
+    public Double getEbc() {
         return ebc;
     }
 
-    public void setEbc(Long ebc) {
+    public void setEbc(Double ebc) {
         this.ebc = ebc;
     }
 
-    public Long getSrm() {
+    public Double getSrm() {
         return srm;
     }
 
-    public void setSrm(Long srm) {
+    public void setSrm(Double srm) {
         this.srm = srm;
     }
 
@@ -230,11 +232,11 @@ public class Brew {
         this.ph = ph;
     }
 
-    public Long getAttenuationLevel() {
+    public Double getAttenuationLevel() {
         return attenuationLevel;
     }
 
-    public void setAttenuationLevel(Long attenuationLevel) {
+    public void setAttenuationLevel(Double attenuationLevel) {
         this.attenuationLevel = attenuationLevel;
     }
 
