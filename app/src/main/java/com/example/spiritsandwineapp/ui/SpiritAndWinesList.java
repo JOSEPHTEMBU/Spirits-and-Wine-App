@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.spiritsandwineapp.R;
 import com.example.spiritsandwineapp.models.Brew;
@@ -25,7 +27,10 @@ public class SpiritAndWinesList extends AppCompatActivity {
     String[] drinks = {"Champagne", " rum", "tequila", "baijiu", "Amarula", "White Walker", "Vodka", "shōchū", "shōchū"};
     @BindView(R.id.drinkListView)
     ListView mDrinksListView;
-
+    //@BindView(R.id.progressBar)
+    //ProgressBar mProgressBar;
+   // @BindView(R.id.errorTextView)
+    //TextView mErrorTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +48,9 @@ public class SpiritAndWinesList extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ArrayList<Brew>> call, Throwable t) {
+
             }
         });
+
     }
 }

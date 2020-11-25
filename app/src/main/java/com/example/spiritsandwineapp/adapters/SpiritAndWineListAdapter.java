@@ -42,6 +42,7 @@ public class SpiritAndWineListAdapter extends RecyclerView.Adapter<SpiritAndWine
     @Override
     public void onBindViewHolder(@NonNull SpiritAndWineListAdapter.SpiritAndWineViewHolder holder, int position) {
         holder.bindBrew(mBrews.get(position));
+
     }
 
     @Override
