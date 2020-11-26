@@ -10,5 +10,6 @@ public class SpiritandWineDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spirit_and_wines_detail);
+
     }
 }

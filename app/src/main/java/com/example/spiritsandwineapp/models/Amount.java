@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
 import org.parceler.Parcel;
 
 
+//@Parcel
 public class Amount {
 
     @SerializedName("value")
