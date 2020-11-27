@@ -1,18 +1,19 @@
 
 package com.example.spiritsandwineapp.models;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import org.parceler.Parcel;
 
-//@Parcel
+
 public class Method {
 
     @SerializedName("mash_temp")
     @Expose
-    private List<MashTemp> mashTemp = null;
+    private List<MashTemp> mashTemp = new ArrayList<>();
     @SerializedName("fermentation")
     @Expose
     private Fermentation fermentation;

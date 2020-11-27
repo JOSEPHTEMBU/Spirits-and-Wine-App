@@ -8,7 +8,8 @@ import com.google.gson.annotations.SerializedName;
 import org.parceler.Parcel;
 
 
-//@Parcel
+
+
 public class MashTemp {
 
     @SerializedName("temp")
@@ -17,6 +18,7 @@ public class MashTemp {
     @SerializedName("duration")
     @Expose
     private Object duration;
+
 
     /**
      * No args constructor for use in serialization
