@@ -11,20 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SpiritsAndWineApp">
-        <activity android:name=".ui.CreateAccountActivity"></activity>
-        <activity android:name=".ui.LoginActivity" />
-        <activity android:name=".ui.SpiritAndWineDetailActivity" />
-        <activity android:name=".ui.SpiritAndWinesDetail" />
-        <activity android:name=".ui.SpiritAndWinesList" />
-        <activity android:name=".SpiritandWineDetailActivity" />
-        <activity android:name=".ui.SpiritAndWineListActivity" />
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.CreateAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.SpiritAndWineDetailActivity" />
+        <activity android:name=".ui.SpiritAndWinesDetail" />
+        <activity android:name=".ui.SpiritAndWinesList" />
+        <activity android:name=".SpiritandWineDetailActivity" />
+
+        <activity android:name=".ui.MainActivity">
+        </activity>
+
     </application>
 
 </manifest>
