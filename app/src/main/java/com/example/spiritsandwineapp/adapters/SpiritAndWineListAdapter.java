@@ -87,7 +87,7 @@ public class SpiritAndWineListAdapter extends RecyclerView.Adapter<SpiritAndWine
             Intent intent = new Intent(mContext, SpiritandWineDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("brews", Parcels.wrap(mBrews));
-            mContext.startActivity(intent);
+           mContext.startActivity(intent);
         }
     }
 }
