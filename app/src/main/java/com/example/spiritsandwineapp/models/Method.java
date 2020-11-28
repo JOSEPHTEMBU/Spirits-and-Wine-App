@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 import org.parceler.Parcel;
 
-
+@Parcel
 public class Method {
 
     @SerializedName("mash_temp")
@@ -19,7 +19,7 @@ public class Method {
     private Fermentation fermentation;
     @SerializedName("twist")
     @Expose
-    private Object twist;
+    private String twist;
 
     /**
      * No args constructor for use in serialization
@@ -34,7 +34,7 @@ public class Method {
      * @param fermentation
      * @param twist
      */
-    public Method(List<MashTemp> mashTemp, Fermentation fermentation, Object twist) {
+    public Method(List<MashTemp> mashTemp, Fermentation fermentation, String twist) {
         super();
         this.mashTemp = mashTemp;
         this.fermentation = fermentation;
@@ -57,11 +57,11 @@ public class Method {
         this.fermentation = fermentation;
     }
 
-    public Object getTwist() {
+    public String getTwist() {
         return twist;
     }
 
-    public void setTwist(Object twist) {
+    public void setTwist(String twist) {
         this.twist = twist;
     }
 

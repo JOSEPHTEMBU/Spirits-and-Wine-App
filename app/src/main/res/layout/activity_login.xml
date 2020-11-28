@@ -16,6 +16,8 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/linearLayout">
 
+
+
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
@@ -61,13 +63,15 @@
             android:textColor="@color/colorTextIcons"
             android:textStyle="bold"
             android:textSize="15sp"
-            android:text="Don't have an account? Sign up here!"
-            android:id="@+id/registerTextView"
+            android:text="Login"
+            android:id="@+id/loginQuestion"
             android:layout_gravity="center_horizontal" />
+
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/registerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"

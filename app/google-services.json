@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "898923610037",
+    "firebase_url": "https://spirits-and-wines.firebaseio.com",
+    "project_id": "spirits-and-wines",
+    "storage_bucket": "spirits-and-wines.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898923610037:android:9a5f876ef4a5333659a3fc",
+        "android_client_info": {
+          "package_name": "com.example.spiritsandwineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898923610037-dhrd0f4otilgqf4lnb00gaaegd84udcj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJs0uEZtRSIprJoye6DJgPdKBJyh4PYGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898923610037-dhrd0f4otilgqf4lnb00gaaegd84udcj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,7 +9,7 @@ import org.parceler.Parcel;
 
 
 
-
+@Parcel
 public class MashTemp {
 
     @SerializedName("temp")
@@ -17,7 +17,7 @@ public class MashTemp {
     private Temp temp;
     @SerializedName("duration")
     @Expose
-    private Object duration;
+    private String duration;
 
 
     /**
@@ -32,7 +32,7 @@ public class MashTemp {
      * @param duration
      * @param temp
      */
-    public MashTemp(Temp temp, Object duration) {
+    public MashTemp(Temp temp, String duration) {
         super();
         this.temp = temp;
         this.duration = duration;
@@ -46,11 +46,11 @@ public class MashTemp {
         this.temp = temp;
     }
 
-    public Object getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(Object duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 
