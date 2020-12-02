@@ -13,8 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.spiritsandwineapp.R;
-import com.example.spiritsandwineapp.SpiritandWineDetailActivity;
 import com.example.spiritsandwineapp.models.Brew;
+import com.example.spiritsandwineapp.ui.SpiritAndWineDetailActivity;
+import com.example.spiritsandwineapp.ui.SpiritAndWineDetailActivity_ViewBinding;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -77,17 +78,22 @@ public class SpiritAndWineListAdapter extends RecyclerView.Adapter<SpiritAndWine
         public void bindBrew(Brew brew) {
             mNameTextView.setText(brew.getName());
             mDateBrewed.setText(brew.getFirstBrewed());
-            mPhTextView.setText(brew.getPh().toString());
+
+            if(brew.getPh() == null){
+                mPhTextView.setText("N/A");
+            }else{
+                mPhTextView.setText(brew.getPh().toString());
+            }
             Picasso.get().load(brew.getImageUrl()).into(mSpiritsAndWineImageView);
 
         }
         @Override
         public void onClick(View v) {
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, SpiritandWineDetailActivity.class);
+            Intent intent = new Intent(mContext, SpiritAndWineDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("brews", Parcels.wrap(mBrews));
-            mContext.startActivity(intent);
+           mContext.startActivity(intent);
         }
     }
 }

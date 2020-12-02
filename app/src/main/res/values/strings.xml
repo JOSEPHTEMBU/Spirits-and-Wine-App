@@ -13,4 +13,9 @@
     <string name="rating">Rating</string>
     <string name="one_cuisine_type">One Cuisine Type</string>
     <string name="spiritsandwine_name">SpiritsandWine Name</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account_sign_up_here">Don\'t have an account? Sign up here!</string>
+    <string name="user_name">User Name</string>
+
+
 </resources>

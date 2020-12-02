@@ -1,5 +1,6 @@
 package com.example.spiritsandwineapp.ui;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,6 +24,8 @@ import com.example.spiritsandwineapp.adapters.SpiritAndWineListAdapter;
 import com.example.spiritsandwineapp.models.Brew;
 import com.example.spiritsandwineapp.network.PunkApi;
 import com.example.spiritsandwineapp.network.PunkClient;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,17 +110,29 @@ public class SpiritAndWinesList extends AppCompatActivity {
 
     Call<ArrayList<Brew>> call = client.getBeers();
 
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spirit_and_wines);
         ButterKnife.bind(this);
-//        mProgressBar = (ProgressBar) .findViewById(R.id.progressBar);
-//
-//        mErrorTextView = (TextView) view.findViewById(R.id.errorTextView);
-//
-//        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+
+
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user == null) {
+                    Intent intent = new Intent(SpiritAndWinesList.this, LoginActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+            }
+        };
 
 
         call.enqueue(new Callback<ArrayList<Brew>>() {
@@ -171,5 +186,19 @@ public class SpiritAndWinesList extends AppCompatActivity {
 
     private void hideProgressBar() {
         mProgressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
     }
 }
