@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="recyclerView" type="id" />
+    <item name="progresssBar" type="id" />
+    <item name="spiritsandwineImageView" type="id" />
+    <item name="spiritsandwineNameTextView" type="id" />
+    <item name="categoryTextView" type="id" />
+    <item name="locationEditText" type="id" />
+    <item name="errorTextView" type="id" />
+    <item name="locationTextView" type="id" />
+    <item name="progressBar" type="id" />
 </resources>
