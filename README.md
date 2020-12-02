@@ -11,6 +11,14 @@
 
 
   https://github.com/JOSEPHTEMBU/Spirits-and-Wine-App
+  
+  
+  
+  # Figma Link
+  
+  https://www.figma.com/file/Ds110pUu15B4fwnUEBcgo8/Beverages%2Cwines-and-spirits-App
+  
+  
 
 
 #  Prerequisites
