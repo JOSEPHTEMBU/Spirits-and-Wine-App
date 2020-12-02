@@ -20,13 +20,13 @@ import butterknife.ButterKnife;
 
 public class SpiritsAndWineDetailsFragment extends Fragment {
 
-    @BindView(R.id.spiritsAndWineImageView)
+    @BindView(R.id.spiritsandwineImageView)
     ImageView mImageLabel;
     @BindView(R.id.spiritsandwineNameTextView)
     TextView mNameLabel;
 
-    @BindView(R.id.phTextView) TextView mPhTextView;
-    @BindView(R.id.firstBrewed) TextView mFirstBrewedTextView;
+    @BindView(R.id.pHTextView) TextView mPhTextView;
+    @BindView(R.id.firstBrewedTextView) TextView mFirstBrewedTextView;
 //    @BindView(R.id.phoneTextView) TextView mPhoneLabel;
 //    @BindView(R.id.addressTextView) TextView mAddressLabel;
 //    @BindView(R.id.saveBrewButton) TextView mSaveBrewButton;
@@ -67,3 +67,5 @@ public class SpiritsAndWineDetailsFragment extends Fragment {
     }
 
 }
+
+
