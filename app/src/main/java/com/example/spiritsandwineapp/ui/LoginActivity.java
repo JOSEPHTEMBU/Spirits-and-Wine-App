@@ -20,17 +20,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.spiritsandwineapp.Constants;
 import com.example.spiritsandwineapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+    private DatabaseReference mSaveEmailReference;
     @BindView(R.id.loginQuestion)TextView mAccountQuestionLogin;
     @BindView(R.id.passwordLoginButton)
     Button mLoginButton;
@@ -52,6 +56,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
+
+        mSaveEmailReference = FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child(Constants.FIREBASE_CHILD_Email);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -92,6 +101,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
     }
+    public void saveLocationToFirebase(String location) {
+        mSaveEmailReference.push().setValue(location);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -121,6 +133,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (view == mLoginButton) {
             loginWithPassword();
+            String Email=mUserEmail.getText().toString();
+            saveLocationToFirebase(Email);
         }
     }
 
