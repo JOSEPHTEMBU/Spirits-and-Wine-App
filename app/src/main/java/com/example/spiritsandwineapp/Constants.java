@@ -7,6 +7,7 @@ public class Constants {
     public static final String FIREBASE_QUERY_INDEX = "index";
     public static final String FIREBASE_CHILD_Email = "Emai";
 
+    public static final String FIREBASE_CHILD_Password = "Password";
 
 
     // public static final String PUNK_API_KEY = BuildConfig.PUNK_API_KEY;
