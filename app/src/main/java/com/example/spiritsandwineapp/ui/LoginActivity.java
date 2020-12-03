@@ -35,6 +35,7 @@ import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     private DatabaseReference mSaveEmailReference;
+    private DatabaseReference mSavePasswordReference;
     @BindView(R.id.loginQuestion)TextView mAccountQuestionLogin;
     @BindView(R.id.passwordLoginButton)
     Button mLoginButton;
@@ -61,6 +62,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 .getInstance()
                 .getReference()
                 .child(Constants.FIREBASE_CHILD_Email);
+        mSavePasswordReference = FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child(Constants.FIREBASE_CHILD_Password);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -104,6 +109,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void saveLocationToFirebase(String location) {
         mSaveEmailReference.push().setValue(location);
     }
+    public void saveLocationalToFirebase(String locational) {
+        mSavePasswordReference.push().setValue(locational);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -135,6 +143,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             loginWithPassword();
             String Email=mUserEmail.getText().toString();
             saveLocationToFirebase(Email);
+            String Password=mUserPassword.getText().toString();
+            saveLocationToFirebase(Password);
         }
     }
 
