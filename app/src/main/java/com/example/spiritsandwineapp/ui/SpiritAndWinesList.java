@@ -37,53 +37,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SpiritAndWinesList extends AppCompatActivity {
-//    private static final String TAG = " ";
-//    String[] drinks = {"Champagne", " rum", "tequila", "baijiu", "Amarula", "White Walker", "Vodka", "shōchū", "shōchū"};
-//    @BindView(R.id.drinkListView)
-//    ListView mDrinksListView;
-//    @BindView(R.id.errorTextView) TextView mErrorTextView;
-//    @BindView(R.id.progressBar) ProgressBar mProgressBar;
-//    //@BindView(R.id.progressBar)
-//    //ProgressBar mProgressBar;
-//   // @BindView(R.id.errorTextView)
-//    //TextView mErrorTextView;
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_spirit_and_wines);
-//        ButterKnife.bind(this);
-//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, drinks);
-//       // Toast.makeText(SpiritAndWinesActivity.this, brew, Toast.LENGTH_LONG).show();
-//        mDrinksListView.setAdapter(adapter);
-//        PunkApi client = PunkClient.getClient();
-//        Call<ArrayList<Brew>> call = client.getBeers();
-//        call.enqueue(new Callback<ArrayList<Brew>>() {
-//
-//            Intent intent = getIntent();
-//            //String location = intent.getStringExtra("location");
-//       // mBrewTextView.setText("Here are all the restaurants near: " + Brew);
-//
-//           // PunkApi client = PunkApi.getClient();
-//
-//           // Call<PunkApiBrewSearchResponse> call = client.getBeers();
-//
-//
-//            @Override
-//            public void onResponse(Call<ArrayList<Brew>> call, Response<ArrayList<Brew>> response) {
-//                Log.d(TAG, "onResponse: successful");
-//
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ArrayList<Brew>> call, Throwable t) {
-//
-//            }
-//        });
-//
-//    }
-
-//    private TextView mErrorTextView;
 
     @BindView(R.id.errorTextView)
      TextView mErrorTextView;
@@ -93,12 +46,6 @@ public class SpiritAndWinesList extends AppCompatActivity {
 
     @BindView(R.id.progressBar)
     ProgressBar mProgressBar;
-
-
-//    private RecyclerView mRecyclerView;
-
-//    private ProgressBar mProgressBar;
-
 
     private SpiritAndWineListAdapter mAdapter;
 
@@ -133,8 +80,6 @@ public class SpiritAndWinesList extends AppCompatActivity {
                 }
             }
         };
-
-
         call.enqueue(new Callback<ArrayList<Brew>>() {
 
             @Override
