@@ -15,8 +15,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +37,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+
+
+    Button button;
+    ImageView imageView;
+    Animation animation;
+
+
+
     private DatabaseReference mSaveEmailReference;
     private DatabaseReference mSavePasswordReference;
     @BindView(R.id.loginQuestion)TextView mAccountQuestionLogin;
@@ -55,6 +66,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        button= (Button) findViewById(R.id.btnshow);
+        imageView=(ImageView) findViewById(R.id.image);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animation = AnimationUtils.loadAnimation (LoginActivity.this,R.anim.fade_out);
+                imageView.startAnimation(animation);
+
+
+            }
+        });
+
         ButterKnife.bind(this);
 
 
@@ -71,6 +94,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mAuth = FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
+
 
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -130,7 +154,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void logout() {
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
